@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<!-- HEAD --> 
+<head>
+	<title>Dice Game</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Nathan Lewis">
+		<meta name="desciption" content="Dice Game">
+		<meta name="keywords" content="dice, chance, roll, Game">
+		<link rel="stylesheet" type="text/css" href="Style.css" title="Style">
+		<script src="script.js"></script>	
+</head>
+
+<!-- BODY -->
+<body>
+	
+	<!-- SETUP -->
+	<section id="setup">
+		<h1>Hello and Welcome to the Dice Game</h1>
+			<p>Please choose the number of Dice you would like to play with (Between 3 -6 Dice)</p>
+			<input id="diceNum" type="text" value="3">
+			<button id = "setupBtn" onclick="setup(); play()">Roll</button>
+	</section>
+	
+	<!-- PLAY -->
+	<section id="play">
+        <div id="dicePics"></div>
+        <div>Round Number: <span id="rndNumber">0</span></div>
+        <div>Round Score: <span id="rndScore">0</span></div>
+        <div>Balance of Total Score: <span id="scoreBlnce">0</span></div>
+        
+        <br>
+
+		<button id="anotherRnd" onclick="play()">Play Another Round</button>
+		<button id="endGame" onclick="endGame()">End the Game</button>
+	</section>
+	
+	<!-- END -->
+	<section id="end">
+		<h2 class="thanksMsg">Thanks for Playing!</h2>
+			<h3>Summary of Results</h3>			
+				<div id="wrapper">
+					<div>Total Number of Rounds: <span id="totalRndNum"></span></div>
+					<div>Total Balance of Points: <span id="totalBlnce"></span></div>
+					<div>Average Points per Round: <span id="averageScre"></span></div>
+				</div>
+				
+				<img class="me" src="images/dices.png" alt="">
+	</section>	
+	
+	<!-- FOOTER -->
+	<footer>
+		<div>Posted by: Nathan Lewis</div>
+		<div>© 2017 All Rights Reserved</div>
+		<div>Contact Information: <a href="mailto:N.J.Lewis2@liverpool.ac.uk">
+			N.J.Lewis2@liverpool.ac.uk</a></div>
+	</footer>	
+</body>
+
+</html>
